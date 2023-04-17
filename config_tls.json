@@ -17,7 +17,7 @@
     "inbounds": [
         {
             "listen": "0.0.0.0",
-            "port": 1234,
+            "port": 443,
             "protocol": "vmess",
             "settings": {
                 "clients": [
@@ -32,8 +32,8 @@
                 "tlsSettings": {
                     "certificates": [
                         {
-                            "certificateFile": "/etc/letsencrypt/live/vpn-id.riocourse.my.id/fullchain.pem",
-                            "keyFile": "/etc/letsencrypt/live/vpn-id.riocourse.my.id/privkey.pem"
+                            "certificateFile": "/path/to/certificate.crt",
+                            "keyFile": "/path/to/key.key"
                         }
                     ]
                 }
