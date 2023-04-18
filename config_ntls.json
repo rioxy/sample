@@ -12,9 +12,7 @@
         "clients": [
           {
             "id": "640d539c-c4ce-4d46-bd91-62d220d3bda9",
-            "alterId": 0,
-            "security": "auto",
-            "level": 8
+            "alterId": 0
           }
         ]
       },
@@ -39,13 +37,15 @@
           "tls"
         ]
       },
+      "tag": "inbound",
       "domain": "vpn-1.riocourse.my.id"
     }
   ],
   "outbounds": [
     {
       "protocol": "freedom",
-      "settings": {}
+      "settings": {},
+      "tag": "outbound"
     },
     {
       "protocol": "blackhole",
@@ -73,14 +73,16 @@
           "fc00::/7",
           "fe80::/10"
         ],
-        "outboundTag": "blocked"
+        "outboundTag": "blocked",
+        "tag": "blocked"
       },
       {
         "type": "field",
         "outboundTag": "blocked",
         "protocol": [
           "bittorrent"
-        ]
+        ],
+        "tag": "blocked"
       }
     ]
   }
