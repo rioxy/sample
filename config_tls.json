@@ -11,10 +11,10 @@
       "settings": {
         "clients": [
           {
-            "id": "${uuid}",
-            "alterId": 2,
+            "id": "640d539c-c4ce-4d46-bd91-62d220d3bda9",
+            "alterId": 0,
             "security": "auto",
-            "level": 0
+            "level": 8
           }
         ]
       },
@@ -24,15 +24,15 @@
         "tlsSettings": {
           "certificates": [
             {
-              "certificateFile": "etc/v2ray/v2ray.crt",
-              "keyFile": "/etc/v2ray/v2ray.key"
+              "certificateFile": "/etc/letsencrypt/live/vpn-1.riocourse.my.id/fullchain.pem",
+              "keyFile": "/etc/letsencrypt/live/vpn-1.riocourse.my.id/privkey.pem"
             }
           ]
         },
         "wsSettings": {
           "path": "/v2ray",
           "headers": {
-            "Host": ""
+            "Host": "vpn-1.riocourse.my.id"
           }
         },
         "quicSettings": {},
@@ -48,7 +48,7 @@
           "tls"
         ]
       },
-      "domain": "$domain"
+      "domain": "vpn-1.riocourse.my.id"
     }
   ],
   "outbounds": [
