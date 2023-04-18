@@ -6,25 +6,34 @@
   },
   "inbounds": [
     {
-      "port": 80,
+      "port": 443,
       "protocol": "vmess",
       "settings": {
         "clients": [
           {
-            "id": "640d539c-c4ce-4d46-bd91-62d220d3bda9",
-            "alterId": 0,
+            "id": "${uuid}",
+            "alterId": 2,
             "security": "auto"
-            "level": 8
-#none
+            "level": 0
+#tls
           }
         ]
       },
       "streamSettings": {
         "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "certificates": [
+            {
+              "certificateFile": "etc/v2ray/v2ray.crt",
+              "keyFile": "/etc/v2ray/v2ray.key"
+            }
+          ]
+        },
         "wsSettings": {
           "path": "/v2ray",
           "headers": {
-            "Host": "vpn-1.riocourse.my.id"
+            "Host": ""
           }
          },
         "quicSettings": {},
@@ -40,43 +49,7 @@
           "tls"
         ]
       },
-      "domain": "vpn-1.riocourse.my.id"
-    },
-  rt": 80,
-      "protocol": "vmess",
-      "settings": {
-        "clients": [
-          {
-            "id": "640d539c-c4ce-4d46-bd91-62d220d3bda9",
-            "alterId": 0,
-            "security": "auto"
-            "level": 8
-#none
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "wsSettings": {
-          "path": "/v2ray",
-          "headers": {
-            "Host": "vpn-1.riocourse.my.id"
-          }
-         },
-        "quicSettings": {},
-        "sockopt": {
-          "mark": 0,
-          "tcpFastOpen": true
-        }
-      },
-      "sniffing": {
-        "enabled": true,
-        "destOverride": [
-          "http",
-          "tls"
-        ]
-      },
-      "domain": "vpn-1.riocourse.my.id"
+      "domain": "$domain"
     }
   ],
   "outbounds": [
