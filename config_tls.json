@@ -33,7 +33,7 @@
         "wsSettings": {
           "path": "/v2ray",
           "headers": {
-            "Host": ""
+            "Host": "vpn-1.riocourse.my.id"
           }
          },
         "quicSettings": {},
@@ -49,7 +49,7 @@
           "tls"
         ]
       },
-      "domain": "$domain"
+      "domain": "vpn-1.riocourse.my.id"
     }
   ],
   "outbounds": [
