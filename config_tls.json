@@ -15,7 +15,6 @@
             "alterId": 0,
             "security": "auto"
             "level": 8
-#tls
           }
         ]
       },
@@ -25,8 +24,8 @@
         "tlsSettings": {
           "certificates": [
             {
-              "certificateFile": "etc/v2ray/v2ray.crt",
-              "keyFile": "/etc/v2ray/v2ray.key"
+              "certificateFile": "/etc/letsencrypt/live/vpn-1.riocourse.my.id/fullchain.pem",
+              "keyFile": "/etc/letsencrypt/live/vpn-1.riocourse.my.id/privkey.pem"
             }
           ]
         },
