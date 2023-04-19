@@ -24,15 +24,15 @@
         "tlsSettings": {
           "certificates": [
             {
-              "certificateFile": "/etc/letsencrypt/live/vpn-1.riocourse.my.id/fullchain.pem",
-              "keyFile": "/etc/letsencrypt/live/vpn-1.riocourse.my.id/privkey.pem"
+              "certificateFile": "/etc/letsencrypt/live/id-1.riocourse.my.id/fullchain.pem",
+              "keyFile": "/etc/letsencrypt/live/id-1.riocourse.my.id/privkey.pem"
             }
           ]
         },
         "wsSettings": {
           "path": "/v2ray",
           "headers": {
-            "Host": "vpn-1.riocourse.my.id"
+            "Host": "id-1.riocourse.my.id"
           }
          },
         "quicSettings": {},
@@ -48,7 +48,7 @@
           "tls"
         ]
       },
-      "domain": "vpn-1.riocourse.my.id"
+      "domain": "id-1.riocourse.my.id"
     },
     {
       "port": 80,
