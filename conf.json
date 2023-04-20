@@ -13,7 +13,7 @@
           {
             "id": "640d539c-c4ce-4d46-bd91-62d220d3bda9",
             "alterId": 0,
-            "security": "auto"
+            "security": "auto",
             "level": 8
           }
         ]
@@ -24,15 +24,15 @@
         "tlsSettings": {
           "certificates": [
             {
-              "certificateFile": "/etc/letsencrypt/live/id-1.riocourse.my.id/fullchain.pem",
-              "keyFile": "/etc/letsencrypt/live/id-1.riocourse.my.id/privkey.pem"
+              "certificateFile": "/etc/letsencrypt/live/vps.riocourse.my.id/fullchain.pem",
+              "keyFile": "/etc/letsencrypt/live/vps.riocourse.my.id/privkey.pem"
             }
           ]
         },
         "wsSettings": {
           "path": "/v2ray",
           "headers": {
-            "Host": "id-1.riocourse.my.id"
+            "Host": "vps.riocourse.my.id"
           }
          },
         "quicSettings": {},
@@ -48,7 +48,7 @@
           "tls"
         ]
       },
-      "domain": "id-1.riocourse.my.id"
+      "domain": "vps.riocourse.my.id"
     },
     {
       "port": 80,
@@ -66,7 +66,7 @@
         "wsSettings": {
           "path": "/v2ray",
           "headers": {
-            "Host": "vpn-1.riocourse.my.id"
+            "Host": "vps.riocourse.my.id"
           }
         },
         "quicSettings": {},
@@ -83,7 +83,7 @@
         ]
       },
       "tag": "inbound",
-      "domain": "vpn-1.riocourse.my.id"
+      "domain": "vps.riocourse.my.id"
     }
   ],
   "outbounds": [
