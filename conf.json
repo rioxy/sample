@@ -16,6 +16,9 @@
           "certificateFile": "/etc/letsencrypt/live/vps.riocourse.my.id/fullchain.pem",
           "keyFile": "/etc/letsencrypt/live/vps.riocourse.my.id/privkey.pem"
         }]
+      },
+      "sockopt": {
+        "tcpFastOpen": true
       }
     }
   }],
