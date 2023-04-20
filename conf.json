@@ -11,7 +11,7 @@
       "settings": {
         "clients": [
           {
-            "id": "${uuid}",
+            "id": "640d539c-c4ce-4d46-bd91-62d220d3bda9",
             "alterId": 0
           }
         ]
