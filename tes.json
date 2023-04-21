@@ -1,106 +1,54 @@
 {
-  "inbounds": [
-    {
-      "port": 443,
-      "protocol": "vmess",
-      "settings": {
-        "clients": [
-          {
-            "id": "UUID",
-            "level": 1,
-            "alterId": 64
-          }
-        ],
-        "disableInsecureEncryption": false
-      },
-      "streamSettings": {
-        "network": "ws",
-        "security": "tls",
-        "wsSettings": {
-          "path": "/your-websocket-path"
-        },
-        "tlsSettings": {
-          "certificates": [
+    "log": {
+        "loglevel": "warning"
+    },
+    "routing": {
+        "domainStrategy": "AsIs",
+        "rules": [
             {
-              "certificateFile": "/path/to/fullchain.crt",
-              "keyFile": "/path/to/private.key"
+                "type": "field",
+                "ip": [
+                    "geoip:private"
+                ],
+                "outboundTag": "block"
             }
-          ]
-        }
-      }
-    }
-  ],
-  "outbounds": [
-    {
-      "protocol": "freedom",
-      "settings": {},
-      "tag": "direct"
-    },
-    {
-      "protocol": "blackhole",
-      "settings": {},
-      "tag": "block"
-    },
-    {
-      "protocol": "vmess",
-      "settings": {
-        "vnext": [
-          {
-            "address": "your-destination-server-address",
-            "port": 443,
-            "users": [
-              {
-                "id": "UUID",
-                "alterId": 64
-              }
-            ]
-          }
         ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "tls"
-      },
-      "tag": "outbound"
-    }
-  ],
-  "routing": {
-    "domainStrategy": "IPIfNonMatch",
-    "rules": [
-      {
-        "type": "field",
-        "outboundTag": "outbound",
-        "domain": ["your-destination-domain"]
-      },
-      {
-        "type": "field",
-        "outboundTag": "block",
-        "domain": ["geosite:category-ads-all"]
-      },
-      {
-        "type": "field",
-        "outboundTag": "direct",
-        "network": "udp,tcp",
-        "ip": ["geoip:private"]
-      },
-      {
-        "type": "field",
-        "outboundTag": "direct",
-        "network": "tcp",
-        "ip": ["geoip:cn"]
-      },
-      {
-        "type": "field",
-        "outboundTag": "direct",
-        "network": "tcp",
-        "port": "53"
-      },
-      {
-        "type": "field",
-        "outboundTag": "direct",
-        "network": "tcp",
-        "domain": ["geosite:cn"]
-      }
+    },
+    "inbounds": [
+        {
+            "listen": "0.0.0.0",
+            "port": 443,
+            "protocol": "vmess",
+            "settings": {
+                "clients": [
+                    {
+                        "id": "207badbf-2b03-4efd-984c-a413b3b1b80e",
+                        "alterId": 0
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {
+                    "certificates": [
+                        {
+                            "certificateFile": "/usr/local/etc/v2ray/fullchain.pem",
+                            "keyFile": "/usr/local/etc/v2ray/privkey.pem"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "outbounds": [
+        {
+            "protocol": "freedom",
+            "tag": "direct"
+        },
+        {
+            "protocol": "blackhole",
+            "tag": "block"
+        }
     ]
-  }
 }
