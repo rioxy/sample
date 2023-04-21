@@ -22,15 +22,15 @@
         "tlsSettings": {
           "certificates": [
             {
-              "certificateFile": "/etc/letsencrypt/live/vps.riocourse.my.id/fullchain.pem",
-              "keyFile": "/etc/letsencrypt/live/vps.riocourse.my.id/privkey.pem"
+              "certificateFile": "/etc/letsencrypt/live/ip.riocourse.my.id/fullchain.pem",
+              "keyFile": "/etc/letsencrypt/live/ip.riocourse.my.id/privkey.pem"
             }
           ]
         },
         "wsSettings": {
           "path": "/v2ray",
           "headers": {
-            "Host": "vps.riocourse.my.id"
+            "Host": "ip.riocourse.my.id"
           }
         },
         "sockopt": {
@@ -45,7 +45,7 @@
           "tls"
         ]
       },
-      "domain": "vps.riocourse.my.id"
+      "domain": "ip.riocourse.my.id"
     },
     {
       "port": 80,
@@ -63,7 +63,7 @@
         "wsSettings": {
           "path": "/v2ray",
           "headers": {
-            "Host": "vpn-1.riocourse.my.id"
+            "Host": "ip.riocourse.my.id"
           }
         },
         "quicSettings": {},
@@ -80,7 +80,7 @@
         ]
       },
       "tag": "inbound",
-      "domain": "vpn-1.riocourse.my.id"
+      "domain": "ip.riocourse.my.id"
     }
   ],
   "outbounds": [
