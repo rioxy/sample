@@ -12,8 +12,9 @@
         "clients": [
           {
             "id": "207badbf-2b03-4efd-984c-a413b3b1b80e",
-            "alterId": 0
-#tls
+            "alterId": 2,
+            "security": "auto",
+            "level": 0
           }
         ]
       },
@@ -33,7 +34,7 @@
           "headers": {
             "Host": "web-id.riocourse.my.id"
           }
-         },
+        },
         "quicSettings": {},
         "sockopt": {
           "mark": 0,
