@@ -12,9 +12,9 @@
         "clients": [
           {
             "id": "207badbf-2b03-4efd-984c-a413b3b1b80e",
-            "alterId": 2,
+            "alterId": 0,
             "security": "auto",
-            "level": 0
+            "level": 8
           }
         ]
       },
@@ -32,7 +32,7 @@
         "wsSettings": {
           "path": "/v2ray",
           "headers": {
-            "Host": "web-id.riocourse.my.id"
+            "Host": "ip.riocourse.my.id"
           }
         },
         "quicSettings": {},
@@ -48,7 +48,7 @@
           "tls"
         ]
       },
-      "domain": "web-id.riocourse.my.id"
+      "domain": "ip.riocourse.my.id"
     }
   ],
   "outbounds": [
