@@ -17,8 +17,8 @@
         "tlsSettings": {
           "certificates": [
             {
-              "v2ray/fullchaim.pem",
-              "v2ray/privkey.pem"
+              "certificateFile": "v2ray/fullchain.pem",
+              "keyFile": "v2ray/privkey.pem"
             }
           ]
         },
