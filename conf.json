@@ -25,7 +25,7 @@
         "wsSettings": {
           "path": "/v2ray",
           "headers": {
-            "Host": "ip.riocourse.my.id"
+            "Host": "pt.riocourse.my.id"
           }
         },
         "sockopt": {
@@ -39,6 +39,41 @@
           "tls"
         ]
       }
+    },
+    {
+      "port": 80,
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "640d539c-c4ce-4d46-bd91-62d220d3bda9",
+            "alterId": 0
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/",
+          "headers": {
+            "Host": "pt.riocourse.my.id"
+          }
+        },
+        "quicSettings": {},
+        "sockopt": {
+          "mark": 0,
+          "tcpFastOpen": true
+        }
+      },
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ]
+      },
+      "tag": "inbound",
+      "domain": "pt.riocourse.my.id"
     }
   ],
   "outbounds": [
