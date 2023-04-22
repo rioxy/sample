@@ -1,41 +1,50 @@
 {
-    "inbounds": [
-        {
-            "port": 443,
-            "protocol": "vmess",
-            "settings": {
-                "clients": [
-                    {
-                        "id": "550e8400-e29b-41d4-a716-446655440000",
-                        "alterId": 0
-                    }
-                ]
-            },
-            "streamSettings": {
-                "network": "ws",
-                "wsSettings": {
-                    "path": "/",
-                    "headers": {
-                        "Host": "ip.riocourse.my.id"
-                    }
-                },
-                "security": "tls",
-                "tlsSettings": {
-                    "allowInsecure": true,
-                    "certificates": [
-                        {
-                            "certificateFile": "/path/to/cert.pem",
-                            "keyFile": "/path/to/key.pem"
-                        }
-                    ]
-                }
+  "inbounds": [
+    {
+      "port": 443,
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "640d539c-c4ce-4d46-bd91-62d220d3bda9",
+            "alterId": 0
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "certificates": [
+            {
+              "v2ray/fullchaim.pem",
+              "v2ray/privkey.pem"
             }
+          ]
+        },
+        "wsSettings": {
+          "path": "/v2ray",
+          "headers": {
+            "Host": "ip.riocourse.my.id"
+          }
+        },
+        "sockopt": {
+          "mark": 0
         }
-    ],
-    "outbounds": [
-        {
-            "protocol": "freedom",
-            "settings": {}
-        }
-    ]
+      },
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ]
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "settings": {}
+    }
+  ]
 }
