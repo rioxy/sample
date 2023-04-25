@@ -1,4 +1,6 @@
 {
+  "inbounds": [
+    {
       "port": 10000,
       "protocol": "vmess",
       "settings": {
@@ -14,3 +16,11 @@
         "network": "udp"
       }
     }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "settings": {}
+    }
+  ]
+}
