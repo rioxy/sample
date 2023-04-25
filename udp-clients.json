@@ -1,0 +1,32 @@
+{
+  "inbounds": [
+    {
+      "port": 1080,
+      "listen": "127.0.0.1",
+      "protocol": "socks",
+      "settings": {}
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "vmess",
+      "settings": {
+        "vnext": [
+          {
+            "address": "your_server_ip_address",
+            "port": 10000,
+            "users": [
+              {
+                "id": "00000000-0000-0000-0000-000000000001",
+                "alterId": 64
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "udp"
+      }
+    }
+  ]
+}
