@@ -1,0 +1,16 @@
+{
+      "port": 10000,
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "00000000-0000-0000-0000-000000000001",
+            "alterId": 64
+          }
+        ],
+        "udp": true
+      },
+      "streamSettings": {
+        "network": "udp"
+      }
+    }
