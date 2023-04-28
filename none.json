@@ -12,9 +12,9 @@
         "clients": [
           {
             "id": "${uuid}",
-            "alterId": 2,
+            "alterId": 0,
             "security": "auto"
-            "level": 0
+            "level": 8
 #none
           }
         ]
