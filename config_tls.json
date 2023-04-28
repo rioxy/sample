@@ -29,7 +29,8 @@
           }
         },
         "sockopt": {
-          "mark": 0
+          "mark": 0,
+          "tcpFastOpen": true
         }
       },
       "sniffing": {
