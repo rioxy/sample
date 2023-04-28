@@ -39,7 +39,8 @@
           "http",
           "tls"
         ]
-      }
+      },
+      "domain": "$domain"
     }
   ],
   "outbounds": [
